@@ -1,0 +1,135 @@
+/* events needs to be added in javascript */
+/* 1. select and click on option */
+/* 2. caret rotation */
+/* 3. current active option */
+/* 4. menu open effect */
+
+* {
+    margin: 10;
+    padding: 10;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(img/hybrid-animals.jpeg);
+    background-size: cover;
+    /* relative to viewport height */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.dropdown {
+    
+    /* relative to parent element */
+    min-width: 5em;
+    position: relative;
+}
+.dropdown * {
+    box-sizing:border-box;
+}
+.select{
+    background-color:aliceblue;
+
+    display:flex;
+    justify-content:space-between;
+    align-content:center;
+    border:1px aliceblue solid;
+    border-radius: 0.3em;
+    padding:0.2em;
+    cursor:pointer;
+    transition: background 0.3s;
+}
+
+/* 1. clicked-style (java) */
+.select-clicked{
+    border:1px rgb(215, 220, 224) solid;
+} 
+
+.select:hover{
+    background:rgb(215, 220, 224);
+}
+.caret{
+    width:0;
+    height:0px;
+    margin-top: 6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgb(0, 0, 0);
+    transition:0.3s;
+}
+
+/* 2. rotate caret (java) */
+.caret-rotate{
+    transform:rotate(180deg);
+}
+
+.menu{
+    color:rgba(0, 0, 0, 0.5);
+    list-style: none;
+    padding:0.1em 0.2em;
+    background:rgba(215, 220, 224, 0.5);
+    border:1px aliceblue solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.319);
+    border-radius: 0.3em;
+    /* fit the box to text */
+    position:absolute;
+    top:1.2em;
+    left: 50%;
+    width:100%;
+    /* dont understand! */
+    transform: translateX(-50%);
+    opacity:0;
+    display:none;
+    transition:0.2s;
+    z-index: 1;
+} 
+.menu li{
+    padding: 0.2em 0.1em;
+    margin:0.1em 0;
+    border-radius:0.1em;
+    cursor:pointer;
+}
+.menu li:hover{
+    background:rgb(241, 248, 255,0.5);
+}
+
+/* 3. active style(java) */
+.active{
+    /* current choosen one */
+    background:rgb(241, 248, 255);
+}
+
+/* 4. open style(java) */
+.menu-open{
+    display:block;
+    opacity:1;
+}
+
+
+.input_box{
+    background-color:rgba(240, 248, 255, 0.85);
+    padding:0.2em 1.2em;
+    border-radius: 0.35em;
+
+    position:relative;
+    left: 10px;
+}
+
+.button_confirm{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:#fff;
+    padding:0.2em 0.3em;
+    border-radius: 0.35em;
+
+    position:relative;
+    left: 35px;
+}
