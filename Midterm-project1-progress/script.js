@@ -4,10 +4,6 @@ window.addEventListener("load", function () {
     let button_One = this.document.getElementById('button_one');
     button_One.addEventListener('click', function () {
 
-        // !!breed kind!!
-        // "afghan","basset", "blood","english","ibizan", "plott","walker"
-        // console.log("global variable is:" + animal_selection);
-
         // 1. check dropdown menu (species)
         let animalTag = document.getElementById("animal_tag").innerText;
 
@@ -48,7 +44,7 @@ window.addEventListener("load", function () {
                     let img = new Image_create_dog(180, height / 2); // create image
                     image_array_dog.push(img);
 
-                    // ---* Edition-1: 直接用 DOM button load image
+                    // ---* Edition-1: use DOM button load image
                     // loadImage(dogData.message, function (url_p) {
                     //     imageMode(CENTER);
                     //     image(url_p, width / 3, height / 2, 200, 200);
@@ -83,11 +79,6 @@ window.addEventListener("load", function () {
                     let img = new Image_create_cat(820, height / 2);
                     image_array_cat.push(img);
 
-                    // //  ---* Edition-1: 直接用 DOM button load image
-                    // loadImage(catImage_url, function (url_p) {
-                    //     imageMode(CENTER);
-                    //     image(url_p, width / 3, height / 2, 200, 200);
-                    //     console.log("pressed!");
                 });
         }; // if "Cat!"
 
